@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/playlistFragment"
+    android:id="@+id/nav_graf">
+    <fragment
+        android:id="@+id/playlistFragment"
+        android:name="com.arslan.youtube.ui.playlist.PlaylistFragment"
+        android:label="playlist_fragment"
+        tools:layout="@layout/fragment_playlist" >
+        <action
+            android:id="@+id/action_playlistFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+        <action
+            android:id="@+id/action_playlistFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.arslan.youtube.ui.details.DetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_noInternetFragment"
+            app:destination="@id/noInternetFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_videoDetailFragment"
+            app:destination="@id/videoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noInternetFragment"
+        android:name="com.arslan.youtube.ui.noInternet.NoInternetFragment"
+        android:label="fragment_no_internet"
+        tools:layout="@layout/fragment_no_internet" >
+        <action
+            android:id="@+id/action_noInternetFragment_to_playlistFragment"
+            app:destination="@id/playlistFragment" />
+        <action
+            android:id="@+id/action_noInternetFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoDetailFragment"
+        android:name="com.arslan.youtube.ui.video.VideoDetailFragment"
+        android:label="video_detail_fragment"
+        tools:layout="@layout/fragment_video_detail" />
+</navigation>
