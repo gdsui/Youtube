@@ -5,6 +5,10 @@ import androidx.room.Room
 import com.arslan.youtube.data.local.YoutubeDatabase
 import com.arslan.youtube.data.network.YoutubeApi
 import com.arslan.youtube.data.repository.YoutubeRepository
+import com.arslan.youtube.ui.details.DetailsViewModel
+import com.arslan.youtube.ui.main.MainViewModel
+import com.arslan.youtube.ui.noInternet.NoInternetViewModel
+import com.arslan.youtube.ui.playlist.PlaylistViewModel
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
